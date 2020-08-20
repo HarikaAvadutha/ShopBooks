@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+  user-select: none;
+}
+
+#header {
+  border-style: inset;
+  background-color: slategray;
+  font-size: x-large;
+  padding: 10px;
+  border-color: #9c9a9a;
+  font-variant: petite-caps;
+}
+
+#header p {
+  color: #b71f3a;
+  font-size: xx-large;
+  margin: 0px;
+}
+
+.search-text {
+  width: 70%;
+  border-color: black;
+  outline: none;
+}
+
+.search-button {
+  border-left: 0px;
+  margin-left: -5px;
+  border-color: black;
+}
+
+#header i {
+  margin: auto;
+  cursor: pointer;
+  color: #b71f3a;
+}
+
+template img {
+  margin: 5px;
+  width: 210px;
+  height: 300px;
+}
+.card {
+  align-items: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.disable {
+  background-color: lightblue;
+  pointer-events: none;
+  color: black;
+}
+
+#main {
+  margin-bottom: 40px;
+}
+
+footer {
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: slategray;
+  color: #b71f3a;
+  text-align: center;
+  height: 40px;
+  border-style: outset;
+  border-color: #9c9a9a;
+}
