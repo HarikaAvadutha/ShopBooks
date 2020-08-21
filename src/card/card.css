@@ -1,0 +1,13 @@
+template img {
+  margin: 5px;
+  width: 210px;
+  height: 300px;
+}
+
+.card {
+  align-items: center;
+}
+
+.card-body {
+  text-align: center;
+}

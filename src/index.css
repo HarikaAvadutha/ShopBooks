@@ -3,7 +3,7 @@ body {
   user-select: none;
 }
 
-#header {
+/* #header {
   border-style: inset;
   background-color: slategray;
   font-size: x-large;
@@ -34,8 +34,8 @@ body {
   margin: auto;
   cursor: pointer;
   color: #b71f3a;
-}
-
+} */
+/* 
 template img {
   margin: 5px;
   width: 210px;
@@ -46,8 +46,8 @@ template img {
 }
 
 .card-body {
-  text-align: center;
-}
+  text-align: center; */
+/* } */
 
 .disable {
   background-color: lightblue;

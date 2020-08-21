@@ -1,3 +1,9 @@
+import img from './resources/img2.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import { header } from './header/header.js';
+import { template } from './card/card.js';
+
 let books_data = {
   books: [
     {
@@ -12,7 +18,7 @@ let books_data = {
       name: 'IKIGAI',
       price: 350.0,
       quantity: 10,
-      img: 'resources/img2.jpg',
+      img: img,
     },
     {
       id: 3,
@@ -73,18 +79,22 @@ let books_data = {
   ],
 };
 
-function init() {
+(function init() {
+  header();
+  template();
   showContent(books_data.books);
   document.getElementById('input').addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
       searchByName();
     }
   });
-}
+})();
 
 function showContent(books) {
   let cardTemplate, card;
+  debugger;
   cardTemplate = document.getElementsByTagName('template')[0];
+  console.log(cardTemplate);
   let main = document.getElementById('main');
   main.innerHTML = '';
   for (let i = 0; i < books.length; i++) {
