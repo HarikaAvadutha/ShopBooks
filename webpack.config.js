@@ -32,16 +32,20 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              minimize: true,
-              interpolation: false,
-            },
-          },
-        ],
+        loader: 'html-loader',
       },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ['file-loader'],
+      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     emitError: true,
+      //   },
+      // },
     ],
   },
 };

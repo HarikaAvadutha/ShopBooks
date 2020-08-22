@@ -17,3 +17,7 @@
   pointer-events: none;
   color: black;
 }
+
+.container1 {
+  min-height: 27.2em;
+}
