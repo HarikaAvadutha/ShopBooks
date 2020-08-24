@@ -15,14 +15,21 @@ export function generateCard(book) {
 function addToCardButton(newCard, book) {
   let addToCart = newCard.getElementById('add-to-cart');
   addToCart.textContent = 'Add to cart';
+  if (book.cartCount && book.cartCount > 0) {
+    updateAddToCart(addToCart, 'Added to cart');
+    return;
+  }
   if (book.quantity !== 0) {
     addToCart.addEventListener('click', () => {
-      addToCart.innerHTML = 'Added to cart';
       addBookToCart(book);
-      addToCart.classList.add('disable');
+      updateAddToCart(addToCart, 'Added to cart');
     });
   } else {
-    addToCart.innerHTML = 'Out of stock';
-    addToCart.classList.add('disable');
+    updateAddToCart(addToCart, 'Out of Stock');
   }
+}
+
+function updateAddToCart(addToCart, label) {
+  addToCart.innerHTML = label;
+  addToCart.classList.add('disable');
 }

@@ -2,6 +2,10 @@ import './header.css';
 import header from './header.html';
 import { searchByName } from './../services/searchService';
 import { displayAutoComplete } from './../autoComplete/autoComplete';
+import { displayCart } from '../cartContainer/cartContainer';
+import { displayCards } from '../cardContainer/cardContainer';
+import { getBooksData } from '../services/dataService';
+import { getCartItems } from '../services/cartService';
 
 export function displayHeader() {
   let headerDiv = document.createElement('header');
@@ -19,4 +23,16 @@ export function addEventListeners() {
       searchByName(document.getElementById('input').value);
     }
   });
+  document.getElementById('cart-button').addEventListener('click', () => {
+    displayCart(getCartItems());
+    clearSearchField();
+  });
+  document.getElementById('shopbooks-click').addEventListener('click', () => {
+    displayCards(getBooksData());
+    clearSearchField();
+  });
+}
+
+function clearSearchField() {
+  document.getElementById('input').value = '';
 }

@@ -1,20 +1,21 @@
-import './cardContainer.css';
-import cardContainer from './cardContainer.html';
-import { generateCard } from '../card/card';
+import './cartContainer.css';
+import cartContainerTemp from './cartContainer.html';
+import { generateCart, displayTotals } from '../cart/cart';
 
-export function displayCardContainer() {
-  document.body.innerHTML += cardContainer;
-}
-
-export function displayCards(books) {
+export function displayCart(cartItems) {
   let mainContainer = document.getElementById('main');
-  books.forEach((book) => {
-    mainContainer.appendChild(generateCard(book));
+  mainContainer.innerHTML = cartContainerTemp;
+  let cartContainer = document.getElementById('cartContainer');
+  displayTotalIfCartItemsPresent(cartItems);
+
+  cartItems.forEach((item) => {
+    cartContainer.appendChild(generateCart(item));
   });
+  displayTotals();
 }
 
-export function clearAndDisplayCards(books) {
-  let mainContainer = document.getElementById('main');
-  mainContainer.innerHTML = '';
-  displayCards(books);
+function displayTotalIfCartItemsPresent(cartItems) {
+  if (!cartItems.length) {
+    document.getElementById('checkout-details').classList.add('hide');
+  }
 }
