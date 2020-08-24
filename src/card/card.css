@@ -14,8 +14,7 @@
 }
 
 .add-cart-button,
-.add-cart-button:hover,
-.add-cart-button:focus {
+.add-cart-button:hover {
   background-color: #0a2540;
   color: white;
 }
