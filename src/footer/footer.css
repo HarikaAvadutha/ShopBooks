@@ -1,0 +1,14 @@
+.footer {
+  background-color: #0a2540;
+  height: 8.3em;
+}
+
+.text-footer {
+  margin: 0px;
+  font-size: large;
+  color: white;
+}
+
+.footer-line {
+  margin-bottom: 0;
+}
