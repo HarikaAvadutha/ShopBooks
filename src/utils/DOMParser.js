@@ -1,13 +1,13 @@
-const DOMStringParser = (function () {
+const DOMStringParser = (function() {
   let parser;
 
   function createParser() {
-    let object = new DOMParser();
+    const object = new DOMParser();
     return object;
   }
 
   return {
-    getParser: function () {
+    getParser: function() {
       if (!parser) {
         parser = createParser();
       }
@@ -17,5 +17,5 @@ const DOMStringParser = (function () {
 })();
 
 export function parseStringToHtml(string) {
-  return DOMStringParser.getParser().parseFromString(string, 'text/html');
+  return DOMStringParser.getParser().parseFromString(string, "text/html");
 }
